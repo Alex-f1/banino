@@ -1,7 +1,31 @@
 <header block="header">
   <div elem="section">
     <div elem="inner">
-      
+      <div block="top-line">
+        <div elem="section">
+          <div elem="inner" class="contain">
+            {% include "logo.html" %}
+            <a elem="phone" href="tel:+88003330477">8 (800) 333-04-77</a>
+            <div elem="schedule">Пн-Пт с 10:00 до 20:00</div>
+            <div block="header-contacts">
+              <div elem="section">
+                <div elem="socials">
+                  <a elem="social-link" mods="whatsapp" href="#"></a>
+                  <a elem="social-link" mods="telegram" href="#"></a>
+                </div>
+                <a elem="phone" href="tel:+88003330477">8 (800) 333-04-77</a>
+                <a elem="call" href="#">Заказать звонок</a>
+                <button class="button-burger js-button-burger">
+                  <span></span>
+                </button>
+              </div>
+            </div><!-- header-contacts -->
+          </div>
+        </div>
+        <div elem="menu">
+          {% include "main-menu.html" %}
+        </div>
+      </div><!-- top-line -->
     </div>
   </div>
 </header><!-- header -->

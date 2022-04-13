@@ -28,9 +28,15 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 
 $(function () {
-  //=require ../_blocks/**/*.js
+  var swiper = new Swiper(".js-hero-slider", {
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
   $('.js-button-burger').on('click', function () {
     $(this).toggleClass('_is-active');
-    $('.main-menu').slideToggle();
+    $('.main-menu').toggleClass('_is-show');
   });
 });

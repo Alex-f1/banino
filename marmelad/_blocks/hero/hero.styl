@@ -1,0 +1,91 @@
+.hero
+  position: relative
+  overflow: hidden
+  height: 715px
+
+  @media (max-width: 1360px)
+    height: 500px
+
+  &:before
+    content: ''
+    position: absolute
+    bottom: -356px
+    left: 0
+    width: 100%
+    height: 100%
+    transform: skew(-85deg)
+    background-color: #E5E5E5
+
+    @media (max-width: 1360px)
+      bottom: -250px
+
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    right: -1250px
+    background-image: url('../img/hero-bg.png')
+    background-repeat: no-repeat
+    background-size: contain
+    width: 100%
+    height: 100%
+    z-index: 2
+
+  &__section
+    background-color: #fff
+    background-position: 50% 145px
+    background-repeat: no-repeat
+    background-size: cover
+    height: 100%
+
+    @media (max-width: 1919px)
+      background-position: 50% 230px
+
+    @media (max-width: 1599px)
+      background-position: 50% 305px
+
+    @media (max-width: 1360px)
+      background-position: 50% 125px
+
+    @media (max-width: 1279px)
+      background-position: 50% 190px
+
+    @media (max-width: 959px)
+      background-position: 50% 250px
+
+    @media (max-width: 767px)
+      background-position: 50% 290px
+
+  &__container
+    @media (max-width: 639px)
+      text-align: center
+
+    .swiper-button-next
+      margin-left: 15px
+
+  &__content
+    max-width: 470px
+    width: 100%
+    padding-top: 100px
+    margin-bottom: 60px
+    text-align: left
+
+    @media (max-width: 1599px)
+      padding-top: 50px
+
+    @media (max-width: 1279px)
+      padding-top: 25px
+
+    @media (max-width: 1279px)
+      margin-bottom: 30px
+
+  &__title
+    font-size: 53px
+    color: #A49777
+    font-weight: 700
+    line-height: 1.2
+    margin-bottom: 50px
+
+    @media (max-width: 639px)
+      font-size: 31px
+      margin-bottom: 30px

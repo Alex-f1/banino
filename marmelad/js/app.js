@@ -29,6 +29,6 @@ $(function() {
 
   $('.js-button-burger').on('click', function() {
     $(this).toggleClass('_is-active');
-    $('.main-menu').slideToggle();
+    $('.main-menu').toggleClass('_is-show');
   });
 });

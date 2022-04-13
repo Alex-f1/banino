@@ -1,7 +1,12 @@
-const swiper = new Swiper(".js-hero-slider", {
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+function initHeroSlider() {
+  const swiper = new Swiper(".js-hero-slider", {
+    effect: 'slide',
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}
+
+initHeroSlider()

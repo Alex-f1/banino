@@ -1,0 +1,50 @@
+.catalog-preview
+  padding-top: 75px
+
+  @media (min-width: 1280px)
+    margin-left: -90px
+
+  &__wrapper
+    display: flex
+    align-items: center
+
+    @media (max-width: 639px)
+      padding-right: 15px
+
+  &__title
+    font-size: 142px
+    color: #A49777
+    font-weight: 700
+    line-height: 1
+    margin-right: 115px
+    margin-bottom: 90px
+    align-self: flex-end
+    transform: rotate(-90deg)
+
+    @media (max-width: 1279px)
+      display: none
+
+  &__container
+    padding-bottom: 60px
+
+    @media (max-width: 639px)
+      width 100%
+
+    .swiper-pagination
+      text-align: left
+
+      @media (max-width: 639px)
+        display: none
+
+  &__items
+    @media (max-width: 639px)
+      display: block
+      width: 100%
+
+  &__item
+    width: 345px
+    display: flex
+
+    @media (max-width: 639px)
+      width: 100%
+      margin-bottom: 20px

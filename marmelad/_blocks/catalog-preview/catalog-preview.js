@@ -27,4 +27,6 @@ function initCatalogPreviewSlider() {
   });
 }
 
-initCatalogPreviewSlider();
+if ($('.js-catalog-preview-slider').length) {
+  initCatalogPreviewSlider();
+}

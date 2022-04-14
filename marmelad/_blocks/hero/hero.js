@@ -1,5 +1,5 @@
 function initHeroSlider() {
-  const swiper = new Swiper(".js-hero-slider", {
+  const heroSlider = new Swiper(".js-hero-slider", {
     effect: 'slide',
     loop: true,
     navigation: {
@@ -9,4 +9,6 @@ function initHeroSlider() {
   });
 }
 
-initHeroSlider()
+if ($('.js-hero-slider').length) {
+  initHeroSlider();
+}

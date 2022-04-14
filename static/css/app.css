@@ -944,6 +944,68 @@ p {
 .main-menu__nav ul li a:hover {
   color: #de8c10;
 }
+.our-advantages {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.our-advantages__head {
+  margin-bottom: 60px;
+}
+.our-advantages__title {
+  font-size: 44px;
+  color: #cdcdcd;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.our-advantages__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -50px;
+}
+.our-advantages__item {
+  width: 20%;
+  margin-bottom: 40px;
+  padding-left: 50px;
+}
+.our-advantages__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.our-advantages__icon {
+  width: 151px;
+  height: 151px;
+  background-color: #fff;
+  -webkit-box-shadow: -10px -10px 16px #fff, 2px 7px 10px rgba(231,231,231,0.88);
+          box-shadow: -10px -10px 16px #fff, 2px 7px 10px rgba(231,231,231,0.88);
+  border-radius: 38px;
+  position: relative;
+  margin-bottom: 25px;
+}
+.our-advantages__icon img {
+  vertical-align: top;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.our-advantages__name {
+  font-size: 18px;
+  color: #4d4d4d;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
+}
 .steps-work {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1108,10 +1170,21 @@ p {
   .top-line__phone {
     display: none;
   }
+  .steps-work__container .swiper-button-prev,
+  .steps-work__container .swiper-button-next {
+    display: none;
+  }
 }
 @media (min-width: 960px) {
   .button-burger {
     display: none;
+  }
+  .our-advantages__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media (min-width: 1280px) {
@@ -1230,6 +1303,28 @@ p {
     margin-right: 0;
     margin-bottom: 15px;
   }
+  .our-advantages__items {
+    overflow-y: auto;
+    margin-left: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+  .our-advantages__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 130px;
+            flex: 0 0 130px;
+    width: 130px;
+    max-width: 130px;
+    padding-left: 0;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+  .our-advantages__icon {
+    width: 130px;
+    height: 130px;
+  }
+  .our-advantages__name {
+    font-size: 15px;
+  }
 }
 @media (max-width: 767px) {
   .top-line {
@@ -1274,6 +1369,12 @@ p {
             flex: 0 0 70px;
     width: 70px;
     max-width: 70px;
+  }
+  .our-advantages__head {
+    margin-bottom: 30px;
+  }
+  .our-advantages__title {
+    font-size: 30px;
   }
   .steps-work__title {
     font-size: 30px;

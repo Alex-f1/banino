@@ -2,11 +2,18 @@
   padding-top: 50px
   padding-bottom: 50px
 
+  &__inner
+    @media (max-width: 959px)
+      padding-left: 0
+
   &__head
     margin-bottom: 60px
 
+    @media (max-width: 959px)
+      padding-left: 15px
+
     @media (max-width: 767px)
-      margin-bottom: 30px
+      margin-bottom: 15px
 
   &__title
     font-size: 44px
@@ -27,7 +34,9 @@
 
     @media (max-width: 959px)
       overflow-y: auto
+      padding-top: 25px
       margin-left: 0
+      padding-left: 15px
 
   &__item
     width: 20%

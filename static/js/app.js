@@ -58,6 +58,8 @@ $(function () {
     initCatalogPreviewSlider();
   }
 
+  $('.phone-mask').mask('+7 (000) 000-00-00');
+
   function initHeroSlider() {
     var heroSlider = new Swiper(".js-hero-slider", {
       effect: 'slide',

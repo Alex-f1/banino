@@ -1,0 +1,215 @@
+.contacts-form
+  margin-bottom: 100px
+
+  &__inner
+    max-width: 1500px
+    width: 100%
+    background-color: #fff
+    background-image: url('../img/contacts-form-bg.png')
+    background-repeat: no-repeat
+    background-position: 0 100%
+    box-shadow: 0px 4px 86px rgba(0, 0, 0, 0.1)
+    border-radius: 45px
+    padding: 85px 15px 60px 15px
+    margin-left: auto
+    margin-right: auto
+    position: relative
+    overflow: hidden
+
+    @media (max-width: 1279px)
+      background-image: none
+
+    @media (max-width: 767px)
+      padding-top: 40px
+      padding-bottom: 220px
+
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      width: 334px
+      height: 100%
+      background-color: #A49777
+      border-radius: 0px 45px 45px 45px
+
+      @media (max-width: 1279px)
+        display: none
+
+  &__wrapper
+    max-width: 770px
+    width: 100%
+    margin-right: auto
+    margin-left: auto
+    position: relative
+    z-index: 5
+
+  &__form
+    width: 100%
+
+  &__head
+    margin-bottom: 50px
+
+    @media (max-width: 767px)
+      text-align: center
+      margin-bottom: 30px
+
+  &__title
+    font-size: 50px
+    color: #5A523C
+    font-weight: 700
+    line-height: 1.1
+    margin-bottom: 10px
+
+    @media (max-width: 767px)
+      font-size: 25px
+      margin-bottom: 15px
+
+  &__desc
+    font-size: 25px
+    color: #646464
+    font-weight: 700
+    line-height: 1.1
+
+    @media (max-width: 767px)
+      font-size: 17px
+
+  &__field
+    max-width: 370px
+    width: 100%
+    height: 60px
+    border: 1px solid #A49777
+    border-radius: 9px
+    display: flex
+    align-items: center
+    margin-bottom: 15px
+    overflow: hidden
+
+    @media (max-width: 767px)
+      max-width: 100%
+      height: 45px
+
+    input
+      font-size: 20px
+      color: #A49777
+      font-weight: 800
+      line-height: 1
+      background-color: #fff
+      border: none
+      width: 100%
+      height: 100%
+      padding-left: 25px
+      padding-right: 25px
+      outline: none !important
+
+      @media (max-width: 767px)
+        font-size: 17px
+        padding-right: 20px
+        padding-left: 20px
+
+    ::placeholder
+      font-size: 20px
+      color: #575757
+      font-weight: 800
+      line-height: 1
+
+      @media (max-width: 767px)
+        font-size: 17px
+
+    .svg-icon
+      fill: #A49777
+      flex: 0 0 55px
+      width: 55px
+      max-width: 55px
+      height: 100%
+      border-right: 1px solid #A49777
+      display: flex
+      align-items: center
+      justify-content: center
+
+      svg
+        width: 20px
+        height: 20px
+
+  &__bottom
+    margin-top: 30px
+
+    @media (max-width: 767px)
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: 35px
+
+  &__button-submit
+    min-width: 280px
+    margin-bottom: 20px
+
+    @media (max-width: 639px)
+      min-width: 200px
+
+  &__privacy-policy
+    display: flex
+    align-items: center
+    text-align: left
+    max-width: 280px
+    width: 100%
+
+    input
+      display: none
+
+      &:checked ~ .checkbox-name:before
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6.57143L5.6 10L14 2' stroke='%23A49777' stroke-width='3'/%3E%3C/svg%3E%0A")
+
+    .checkbox-name
+      font-size: 14px
+      color: #dad8d8
+      font-weight: 400
+      line-height: 1.2
+      display: flex
+
+      &:before
+        content: ''
+        flex: 0 0 25px
+        width: 25px
+        max-width: 25px
+        height: 25px
+        background-color: #FFF
+        background-image: none
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-size: 16px 13px
+        border: 1px solid #B5B5B5
+        border-radius: 4px
+        overflow: hidden
+        margin-right: 20px
+        transition: background-image 0.3s, ease 0.3s
+
+        @media (max-width: 479px)
+          margin-right: 10px
+
+    span
+      a
+        color: #A49777
+        font-weight: 700
+        text-decoration: none
+
+        &:hover
+          text-decoration: underline
+
+  &__img
+    position: absolute
+    right: 0
+    bottom: 0
+    width: 780px
+    height: 395px
+    z-index: 2
+
+    @media (max-width: 1279px)
+      width: 360px
+      height: auto
+
+    @media (max-width: 639px)
+      right: -50px
+
+    img
+      vertical-align: top

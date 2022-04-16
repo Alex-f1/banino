@@ -26,7 +26,6 @@ function initStepsWorkSlider() {
         index = (index + 1) % item.length;
         item.eq(index).addClass('_is-steps-work-item');
       }, 3000, $('.steps-work__item'));
-      console.log('+++')
     }
 
     stepsWorkItemAnimation();

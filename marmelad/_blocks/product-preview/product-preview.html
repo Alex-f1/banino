@@ -1,37 +1,8 @@
-= yaml =
-pageTitle: Главная
-bodyClasses:
-layout: !!map
-  header: true
-  footer: true
-  left: false
-  right: false
-= yaml =
-
-{% extends 'app.html' %}
-
-
-{% block main %}
-
-{% include "hero.html" %}
-
-{% include "catalog-preview.html" %}
-
-{% include "steps-work.html" %}
-
-{% include "our-advantages.html" %}
-
-{% include "our-works.html" %}
-
-{% include "contacts-form.html" %}
-
-{% include "product-preview.html" %}
-
-<div block="product-preview" mods="hit">
+<div block="product-preview" mods="new">
   <div elem="section">
     <div elem="inner" class="contain">
       <div elem="head">
-        <h2>Лидеры продаж</h2>
+        <h2>Новинки</h2>
         <div elem="nav-slider">
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
@@ -40,13 +11,13 @@ layout: !!map
       <div elem="container" class="swiper js-product-preview-slider">
         <div elem="items" class="swiper-wrapper">
           <div elem="item" class="swiper-slide">
-            <div block="product-thumb" mods="hit">
+            <div block="product-thumb" mods="new">
               <div elem="body">
                 <div elem="top">
                   <a elem="img" href="#">
-                    <img src="img/product-thumb-img4.png" alt="">
+                    <img src="img/product-thumb-img.png" alt="">
                   </a>
-                  <div elem="tag">Хит</div>
+                  <div elem="tag">NEW</div>
                 </div>
                 <div elem="bottom">
                   <div elem="name">
@@ -68,13 +39,13 @@ layout: !!map
             </div><!-- product-thumb -->
           </div>
           <div elem="item" class="swiper-slide">
-            <div block="product-thumb" mods="hit">
+            <div block="product-thumb" mods="new">
               <div elem="body">
                 <div elem="top">
                   <a elem="img" href="#">
-                    <img src="img/product-thumb-img5.png" alt="">
+                    <img src="img/product-thumb-img2.png" alt="">
                   </a>
-                  <div elem="tag">Хит</div>
+                  <div elem="tag">NEW</div>
                 </div>
                 <div elem="bottom">
                   <div elem="name">
@@ -96,13 +67,13 @@ layout: !!map
             </div><!-- product-thumb -->
           </div>
           <div elem="item" class="swiper-slide">
-            <div block="product-thumb" mods="hit">
+            <div block="product-thumb" mods="new">
               <div elem="body">
                 <div elem="top">
                   <a elem="img" href="#">
-                    <img src="img/product-thumb-img6.png" alt="">
+                    <img src="img/product-thumb-img3.png" alt="">
                   </a>
-                  <div elem="tag">Хит</div>
+                  <div elem="tag">NEW</div>
                 </div>
                 <div elem="bottom">
                   <div elem="name">
@@ -128,5 +99,3 @@ layout: !!map
     </div>
   </div>
 </div><!-- product-preview -->
-
-{% endblock %}

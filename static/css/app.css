@@ -879,6 +879,26 @@ p {
   color: #6a6559;
   margin-bottom: 0;
 }
+.catalog-block {
+  padding-top: 35px;
+  padding-bottom: 60px;
+}
+.catalog-block__head {
+  margin-bottom: 40px;
+}
+.catalog-block__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -20px;
+}
+.catalog-block__item {
+  width: 33.333%;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
 .catalog-preview {
   padding-top: 75px;
   padding-bottom: 60px;
@@ -1643,6 +1663,34 @@ p {
   margin-top: 50px;
   max-width: 220px;
 }
+.s-path {
+  font-size: 16px;
+  color: #a49777;
+  font-weight: 700;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.s-path a {
+  text-decoration: none;
+  color: #ccc;
+  -webkit-transition: color 0.3s, ease 0.3s;
+  transition: color 0.3s, ease 0.3s;
+}
+.s-path a:hover {
+  color: #de8c10;
+}
+.s-path__separator {
+  font-size: 16px;
+  color: #ccc;
+  font-weight: 700;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  line-height: 1;
+}
 .steps-work {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1864,6 +1912,9 @@ p {
   }
   .content-block {
     padding-top: 30px;
+  }
+  .catalog-block {
+    padding-bottom: 30px;
   }
   .catalog-preview {
     padding-bottom: 30px;

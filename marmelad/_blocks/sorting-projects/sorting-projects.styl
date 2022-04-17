@@ -1,0 +1,86 @@
+.sorting-projects
+  padding-top: 30px
+  padding-bottom: 30px
+
+  @media (max-width: 767px)
+    padding-top: 15px
+    padding-bottom: 15px
+
+  &__container
+    display: flex
+    align-items: baseline
+    justify-content: space-between
+
+    @media (max-width: 1279px)
+      justify-content: flex-start
+
+    @media (max-width: 639px)
+      display: block
+
+    &:after
+      content: ''
+      flex: 1 1 185px
+      width: 185px
+      max-width: 185px
+      height: 1px
+      background-color: #A49777
+      border-radius: 13px
+      margin-left: 20px
+
+      @media (max-width: 1279px)
+        display: none
+
+  &__title
+    font-size: 18px
+    color: #676767
+    font-weight: 600
+    line-height: 1.1
+    margin-right: 35px
+
+    @media (max-width: 639px)
+      margin-bottom: 20px
+
+  &__buttons
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+  &__button
+    font-size: 18px
+    color: #B8B8B8
+    font-weight: 600
+    line-height: 1
+    text-align: center
+    text-decoration: none
+    border: 1px solid #D2D2D2
+    border-radius: 13px
+    padding: 13px 30px 17px 30px
+    background-color: #F3F3F3
+    margin-right: 15px
+    margin-bottom: 15 px
+    flex: 1 1 auto
+    min-width: 110px
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s, ease 0.3s
+
+    @media (max-width: 767px)
+      font-size: 15px
+      padding: 9px 10px 13px 10px
+
+    @media (max-width: 639px)
+      min-width: 70px
+
+    &:last-child
+      margin-right: 0
+
+    &:nth-child(2)
+      @media (max-width: 413px)
+        margin-right: 0
+
+    &:hover
+      color: #fff
+      background-color: #DE8C10
+
+    &._is-active
+      color: #fff
+      background-color: #A49777
+      pointer-events: none

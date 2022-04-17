@@ -1,0 +1,49 @@
+.filter-projects
+  padding-bottom: 30px
+
+  @media (max-width: 767px)
+    padding-bottom: 15px
+
+  &__buttons
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+    @media (max-width: 767px)
+      margin-right: -10px
+
+  &__button
+    font-size: 18px
+    color: #B8B8B8
+    font-weight: 600
+    line-height: 1
+    text-align: center
+    text-decoration: none
+    border: 1px solid #D2D2D2
+    border-radius: 13px
+    padding: 13px 15px 17px 15px
+    margin-right: 10px
+    margin-bottom: 10px
+    flex: 0 0 186px
+    width: 186px
+    max-width: 186px
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s, ease 0.3s
+
+    @media (max-width: 767px)
+      font-size: 15px
+      padding: 9px 5px 13px 5px
+      flex: none
+      width: 46%
+      max-width: 46%
+
+    &:last-child
+      margin-right: 0
+
+    &:hover
+      color: #fff
+      background-color: #DE8C10
+
+    &._is-active
+      color: #fff
+      background-color: #A49777
+      pointer-events: none

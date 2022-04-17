@@ -59,6 +59,10 @@ $(function () {
   }
 
   $('.phone-mask').mask('+7 (000) 000-00-00');
+  $('.js-filter-buttons').on('click', function (event) {
+    event.preventDefault();
+    $(this).addClass('_is-active').siblings().removeClass('_is-active');
+  });
 
   function initHeroSlider() {
     var heroSlider = new Swiper(".js-hero-slider", {
@@ -127,6 +131,11 @@ $(function () {
   if ($('.js-product-preview-slider').length) {
     initProductPreviewSlider();
   }
+
+  $('.js-sorting-buttons').on('click', function (event) {
+    event.preventDefault();
+    $(this).addClass('_is-active').siblings().removeClass('_is-active');
+  });
 
   function initStepsWorkSlider() {
     var stepsWorkSlider = undefined;

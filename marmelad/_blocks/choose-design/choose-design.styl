@@ -1,0 +1,213 @@
+.choose-design
+  padding-top: 60px
+  padding-bottom: 160px
+
+  @media (max-width: 1279px)
+    padding-top: 30px
+    padding-bottom: 30px
+
+  @media (max-width: 767px)
+    overflow: hidden
+
+  &__wrapper
+    display: flex
+
+    @media (max-width: 767px)
+      flex-direction: column
+
+  &__left
+    @media (max-width: 767px)
+      order: 1
+
+  &__right
+    @media (max-width: 767px)
+      display: flex
+      flex-wrap: wrap
+
+  &__head
+    max-width: 400px
+    width: 100%
+    margin-bottom: 50px
+
+    @media (max-width: 767px)
+      display: none
+
+    &--mobile
+      display: none
+
+      @media (max-width: 767px)
+        display: block
+        max-width: 100%
+        width: 100%
+        text-align: center
+        margin-bottom: 25px
+
+    h2
+      margin-bottom: 30px
+      line-height: 1.1
+
+  &__button-order
+    padding-right: 15px
+    padding-left: 15px
+
+  &__img
+    width: 750px
+    height: 750px
+    background-image: url('../img/choose-design-bg.png')
+    background-repeat: no-repeat
+    background-size: 50% 50%
+    background-position: 70% 10%
+    position: relative
+
+    @media (max-width: 1024px)
+      width: 450px
+      height: 450px
+
+    @media (max-width: 479px)
+      width: 300px
+      height: 300px
+
+    img
+      vertical-align: top
+      position: absolute
+      top: 75px
+      left: 0px
+
+  &__colors
+    display: flex
+    margin-bottom: 30px
+    padding-left: 60px
+    position: relative
+
+    @media (max-width: 767px)
+      order: 1
+      width: 30%
+      display: block
+      align-self: flex-start
+      padding-left: 30px
+      padding-top: 150px
+
+  &__colors-title
+    font-size: 18px
+    color: #D0D0D0
+    font-weight: 500
+    line-height: 1
+    transform: rotate(-90deg)
+    position: absolute
+    top: 35px
+    left: -60px
+
+    @media (max-width: 767px)
+      left: 25px
+      top: 50px
+      width: 100px
+
+  &__colors-items
+    display: flex
+    flex-wrap: wrap
+    width: 240px
+
+    @media (max-width: 767px)
+      width: 150px
+
+  &__colors-item
+    flex: 0 0 42px
+    width: 42px
+    max-width: 42px
+    height: 42px
+    margin-right: 15px
+    margin-bottom: 25px
+    padding: 0
+    border: none
+    background-color: transparent
+    cursor: pointer
+    border-radius: 54px 54px 54px 4px
+    transition: box-shadow 0.3s, ease 0.3s
+
+    &--vinous
+      background-color: #873A54
+
+    &--red
+      background-color: #8c303c
+
+    &--blue
+      background-color: #225CAA
+
+    &--green
+      background-color: #1C5D59
+
+    &--grey
+      background-color: #9BA0AA
+
+    &--dark-grey
+      background-color: #5F6877
+
+    &--brown
+      background-color: #6D5C62
+
+    &--black
+      background-color: #212A37
+
+    &:hover
+      box-shadow: 9px 7px 12px rgba(0, 0, 0, 0.25)
+
+    &._is-active
+      transform: scale(1.2)
+      box-shadow: 9px 7px 12px rgba(0, 0, 0, 0.25)
+
+  &__surface
+    width: 290px
+    padding-left: 50px
+    position: relative
+    display: flex
+    flex-direction: column
+    padding-top: 20px
+
+    @media (max-width: 767px)
+      width: 70%
+      padding-left: 0
+      padding-top: 0
+      margin-left: -40px
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 1px
+      height: 368px
+      background-color: #D6D6D6
+
+      @media (max-width: 767px)
+        display: none
+
+  &__surface-name
+    font-size: 22px
+    color: #919191
+    font-weight: 500
+    line-height: 1.5
+    text-align: left
+    padding: 10px 35px 10px 35px
+    border: none
+    background-color: transparent
+    border-radius: 16px
+    margin-bottom: 15px
+    cursor: pointer
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, ease 0.3s
+
+    @media (max-width: 767px)
+      font-size: 18px
+      padding-right: 20px
+
+    &:last-child
+      margin-bottom: 0
+
+    &:hover
+      color: #A49777
+      background-color: #fff
+      box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1)
+
+    &._is-active
+      color: #A49777
+      background-color: #fff
+      box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1)

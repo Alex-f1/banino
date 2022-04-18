@@ -32,14 +32,20 @@ $(function () {
     var cardProjectSliderThumbs = new Swiper(".js-card-project-slider-thumbs", {
       spaceBetween: 15,
       slidesPerView: 3,
-      loop: true,
-      watchSlidesProgress: true
+      loop: false,
+      watchSlidesProgress: true,
+      autoplay: {
+        delay: 3000
+      }
     });
     var cardProjectSlider = new Swiper(".js-card-project-slider", {
       spaceBetween: 0,
-      loop: true,
+      loop: false,
       thumbs: {
         swiper: cardProjectSliderThumbs
+      },
+      autoplay: {
+        delay: 3000
       }
     });
   }
@@ -79,6 +85,41 @@ $(function () {
   }
 
   $('.phone-mask').mask('+7 (000) 000-00-00');
+
+  function initEquipmentSlider() {
+    var equipmentSliderThumbs = new Swiper(".js-equipment-slider-thumbs", {
+      spaceBetween: 15,
+      slidesPerView: 3,
+      loop: false,
+      watchSlidesProgress: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 15
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 15
+        }
+      }
+    });
+    var equipmentSlider = new Swiper(".js-equipment-slider", {
+      spaceBetween: 30,
+      loop: false,
+      thumbs: {
+        swiper: equipmentSliderThumbs
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
+  }
+
+  if ($('.js-equipment-slider').length) {
+    initEquipmentSlider();
+  }
+
   $('.js-filter-buttons').on('click', function (event) {
     event.preventDefault();
     $(this).addClass('_is-active').siblings().removeClass('_is-active');

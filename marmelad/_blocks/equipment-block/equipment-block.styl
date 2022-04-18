@@ -1,0 +1,175 @@
+.equipment-block
+  padding-top: 60px
+  padding-bottom: 60px
+
+  @media (max-width: 1279px)
+    padding-top: 30px
+    padding-bottom: 30px
+
+  &__inner
+    @media (max-width: 767px)
+      padding-right: 0
+      padding-left: 0
+
+  &__head
+    margin-bottom: 50px
+    padding-left: 25px
+
+    @media (max-width: 767px)
+      padding-left: 15px
+
+  &__container-thumb
+    margin-bottom: 15px
+
+    @media (max-width: 767px)
+      margin-bottom: 20px
+
+    .swiper-button-prev, .swiper-button-next
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      background-color: #FFF
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 12L2 6.5L7 0.999999' stroke='%23A49777' stroke-width='2'/%3E%3C/svg%3E%0A")
+
+      @media (min-width: 768px)
+        display: none
+
+    .swiper-button-prev
+      left: 0
+
+    .swiper-button-next
+      right: 0
+      transform: translateY(-50%) rotate(180deg)
+
+  &__item-thumb
+    &.swiper-slide-thumb-active
+      & ^[0]
+        &__name
+          background-color: #A49777
+          cursor: default
+
+  &__name
+    color: #FFFFFF
+    font-weight: 700
+    line-height: 1
+    text-align: center
+    background-color: #D9D9D9
+    box-sizing: border-box
+    border-radius: 9px 9px 0 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 15px
+    cursor: pointer
+    transition: background-color 0.3s, ease 0.3s
+
+    @media (max-width: 767px)
+      border-radius: 0
+
+    &:hover
+      background-color: #FF9B04
+
+    span
+      font-size: 20px
+      margin-bottom: 5px
+
+    strong
+      font-size: 30px
+
+      @media (max-width: 767px)
+        font-size: 27px
+
+  &__table
+    width: 100%
+
+    table
+      width: 100%
+      border-collapse: collapse
+
+      tr
+        th, td
+          border: 1px solid #A49777
+          text-align: left
+          padding-top: 20px
+          padding-bottom: 20px
+          padding-right: 50px
+          vertical-align: top
+
+          &:first-child
+            padding-left: 30px
+            border-left: none
+
+            @media (max-width: 767px)
+              padding-left: 15px
+
+          &:last-child
+            border-right: none
+            padding-left: 100px
+
+            @media (max-width: 767px)
+              padding-left: 15px
+
+        th
+          font-size: 20px
+          color: #A49777
+          font-weight: 700
+          line-height: 1.1
+
+          @media (max-width: 767px)
+            display: none
+
+        td
+          @media (max-width: 767px)
+            display: block
+
+          &:first-child
+            font-size: 20px
+            color: #616161
+            font-weight: 500
+            line-height: 1.1
+
+            @media (max-width: 767px)
+              border-bottom: none
+              padding-bottom: 0
+
+          &:last-child
+            @media (max-width: 767px)
+              border-bottom: none
+              border-top: none
+
+            p
+              font-weight: 500
+              font-size: 15px
+              line-height: 1.1
+              color: #888
+              margin-bottom: 5px
+
+        &:last-child
+          td
+            &:last-child
+              @media (max-width: 767px)
+                border-bottom: solid 1px #A49777
+
+  &__bottom
+    padding-right: 15px
+    padding-left: 15px
+    padding-top: 100px
+
+    @media (max-width: 1279px)
+      padding-top: 50px
+
+  &__content
+    max-width: 830px
+    width: 100%
+    margin-right: auto
+    margin-left: auto
+
+    p
+      font-size: 19px
+      color: #6A6559
+      font-weight: 500
+      line-height: 1.7
+      text-align: justify
+
+      @media (max-width: 767px)
+        font-size: 17px

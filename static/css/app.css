@@ -882,6 +882,9 @@ p {
 .inner-page-head h1 {
   margin-bottom: 45px;
 }
+.card-project {
+  padding-bottom: 60px;
+}
 .card-project--new .card-project__tag {
   background-image: url("data:image/svg+xml,%3Csvg width='52' height='60' viewBox='0 0 52 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_16_163)'%3E%3Cpath d='M2 49.394V2C2 0.895431 2.89543 0 4 0H44C45.1046 0 46 0.89543 46 2V49.394C46 50.8486 44.4966 51.8166 43.1724 51.2147L24.8276 42.8762C24.3018 42.6372 23.6982 42.6372 23.1724 42.8762L4.82761 51.2147C3.50341 51.8166 2 50.8486 2 49.394Z' fill='%232DB62A'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_16_163' x='0' y='0' width='52' height='59.3962' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='2' dy='4'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_16_163'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_16_163' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
 }
@@ -2096,6 +2099,82 @@ p {
           flex: none;
   line-height: 1;
 }
+.share-thumb {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.share-thumb__body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.share-thumb__img {
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(19px 19px 23px rgba(0,0,0,0.07));
+          filter: drop-shadow(19px 19px 23px rgba(0,0,0,0.07));
+  margin-bottom: 35px;
+  -webkit-overflow-scrolling: touch;
+}
+.share-thumb__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: top;
+}
+.share-thumb__content {
+  max-width: 430px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.share-thumb__name {
+  font-size: 30px;
+  color: #3d3d3d;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+.share-thumb__text {
+  font-size: 18px;
+  color: #a49777;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.share-thumb__date {
+  font-size: 20px;
+  color: #ababab;
+  font-weight: 500;
+  line-height: 1;
+}
+.shares-block {
+  padding-bottom: 60px;
+}
+.shares-block--type2 {
+  padding-top: 60px;
+}
+.shares-block--type2 .shares-block__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -20px;
+}
+.shares-block--type2 .shares-block__item {
+  width: 50%;
+  padding-left: 20px;
+}
+.shares-block--type2 .shares-block__item .share-thumb__content {
+  max-width: 100%;
+}
 .sorting-projects {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -2464,6 +2543,12 @@ p {
   }
   .our-works__container:after {
     display: none;
+  }
+  .shares-block {
+    padding-top: 30px;
+  }
+  .shares-block--type2 {
+    padding-top: 30px;
   }
   .sorting-projects__container {
     -webkit-box-pack: start;
@@ -2852,6 +2937,23 @@ p {
     -webkit-transform: translateY(1px);
             transform: translateY(1px);
   }
+  .share-thumb__img {
+    margin-bottom: 20px;
+  }
+  .share-thumb__name {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .share-thumb__text {
+    margin-bottom: 10px;
+  }
+  .shares-block--type2 .shares-block__items {
+    display: block;
+  }
+  .shares-block--type2 .shares-block__item {
+    width: 100%;
+    margin-bottom: 35px;
+  }
   .sorting-projects {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -3019,5 +3121,10 @@ p {
 @media (max-width: 413px) {
   .sorting-projects__button:nth-child(2) {
     margin-right: 0;
+  }
+}
+@media (max-width: 1279) {
+  .card-project {
+    padding-bottom: 30px;
   }
 }

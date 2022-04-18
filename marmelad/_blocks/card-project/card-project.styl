@@ -1,0 +1,291 @@
+.card-project
+  &--new
+    & ^[0]
+      &__tag
+        background-image: url("data:image/svg+xml,%3Csvg width='52' height='60' viewBox='0 0 52 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_16_163)'%3E%3Cpath d='M2 49.394V2C2 0.895431 2.89543 0 4 0H44C45.1046 0 46 0.89543 46 2V49.394C46 50.8486 44.4966 51.8166 43.1724 51.2147L24.8276 42.8762C24.3018 42.6372 23.6982 42.6372 23.1724 42.8762L4.82761 51.2147C3.50341 51.8166 2 50.8486 2 49.394Z' fill='%232DB62A'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_16_163' x='0' y='0' width='52' height='59.3962' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='2' dy='4'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_16_163'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_16_163' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A")
+
+  &--hit
+    & ^[0]
+      &__tag
+        background-image: url("data:image/svg+xml,%3Csvg width='52' height='60' viewBox='0 0 52 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_87_51)'%3E%3Cpath d='M2 49.394V2C2 0.895431 2.89543 0 4 0H44C45.1046 0 46 0.89543 46 2V49.394C46 50.8486 44.4966 51.8166 43.1724 51.2147L24.8276 42.8762C24.3018 42.6372 23.6982 42.6372 23.1724 42.8762L4.82761 51.2147C3.50341 51.8166 2 50.8486 2 49.394Z' fill='%23F24A4A'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_87_51' x='0' y='0' width='52' height='59.3962' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='2' dy='4'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_87_51'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_87_51' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A")
+
+  &__head-inner
+    max-width: 1105px
+    width: 100%
+    display: flex
+    align-items: flex-start
+
+    h1
+      max-width: 610px
+      width: 100%
+      line-height: 1.1
+
+  &__links
+    display: flex
+    align-items: center
+    padding-top: 25px
+    margin-left: auto
+
+    @media (max-width: 1023px)
+      display: none
+
+    a
+      font-size: 17px
+      color: #ADADAD
+      font-weight: 600
+      line-height: 1
+      text-decoration: none
+      transition: color 0.3s, ease 0.3s
+
+      &:hover
+        color: #DE8C10
+
+    span
+      flex: 0 0 2px
+      width: 2px
+      max-width: 2px
+      height: 15px
+      background-color: #A49777
+      margin-right: 15px
+      margin-left: 15px
+
+  &__body
+    max-width: 1320px
+    width: 100%
+    padding: 50px 50px 70px 50px
+    box-shadow: 6px 15px 59px rgba(0, 0, 0, 0.08)
+    border-radius: 55px
+    background-color: #FFFFFF
+    margin-top: 10px
+    margin-left: auto
+    margin-right: auto
+    position: relative
+
+    @media (max-width: 1279px)
+      padding-right: 20px
+      padding-left: 20px
+
+    @media (max-width: 767px)
+      padding-top: 130px
+      padding-bottom: 50px
+
+  &__wrapper
+    max-width: 1000px
+    width: 100%
+    display: flex
+    margin-left: auto
+    margin-right: auto
+
+    @media (max-width: 959px)
+      display: block
+
+  &__preview
+    flex: 0 0 470px
+    width: 470px
+    max-width: 470px
+
+    @media (max-width: 959px)
+      width: 100%
+      max-width: 450px
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 30px
+
+  &__container
+    margin-bottom: 40px
+
+    @media (max-width: 767px)
+      margin-bottom: 25px
+
+  &__item
+    display: flex
+    justify-content: center
+    align-items: center
+    height: auto
+
+  &__img
+    margin: auto
+
+    img
+      vertical-align: top
+
+  &__info
+    flex: 0 0 430px
+    width: 430px
+    max-width: 430px
+    margin-left: auto
+
+    @media (max-width: 959px)
+      width: 100%
+      max-width: 450px
+      margin-right: auto
+
+    @media (max-width: 479px)
+      max-width: 230px
+      width: 100%
+      margin-right: auto
+      margin-left: auto
+
+  &__tag
+    font-size: 14px
+    color: #FFF
+    font-weight: 600
+    line-height: 1
+    text-align: center
+    width: 52px
+    height: 60px
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: 0 0
+    position: absolute
+    top: -15px
+    right: 145px
+    padding-top: 15px
+    padding-right: 5px
+    padding-bottom: 10px
+    z-index: 2
+
+    @media (max-width: 767px)
+      top: 45px
+      left: 45px
+      right: auto
+
+  &__name
+    color: #A49777
+    font-weight: 700
+    font-size: 17px
+    line-height: 1
+    margin-bottom: 40px
+
+    @media (max-width: 767px)
+      margin-bottom: 20px
+
+    h3
+      font-size: 30px
+      color: #A49777
+
+  &__cost
+    width: 100%
+    display: flex
+    align-items: center
+    margin-bottom: 50px
+
+    @media (max-width: 767px)
+      margin-bottom: 30px
+
+  &__price
+    display: flex
+    flex-direction: column
+    text-align: right
+    margin-left: auto
+
+    @media (max-width: 767px)
+      position: absolute
+      top: 45px
+      right: 20px
+
+    span
+      font-size: 21px
+      color: #C4C4C4
+      font-weight: 500
+      line-height: 1
+      text-decoration: line-through
+      margin-bottom: 5px
+
+    strong
+      font-size: 32px
+      color: #A49777
+      font-weight: 700
+      line-height: 1
+
+  &__characteristics
+    margin-bottom: 40px
+
+  &__characteristics-name
+    font-size: 17px
+    color: #3D3D3D
+    line-height: 1
+    font-weight: 700
+    display: flex
+    align-items: center
+    margin-bottom: 25px
+
+    &:after
+      content: ''
+      flex: 1 1 auto
+      height: 1px
+      background-color: #A49777
+      margin-left: 30px
+
+  &__parameters
+    display: flex
+
+    @media (max-width: 767px)
+      flex-wrap: wrap
+
+  &__parameter
+    width: 25%
+
+    @media (max-width: 767px)
+      width: 50%
+      margin-bottom: 25px
+
+  &__parameter-body
+    display: flex
+    flex-direction: column
+
+    span
+      font-size: 15px
+      color: #C4C4C4
+      font-weight: 500
+      line-height: 1
+      margin-bottom: 10px
+
+      @media (max-width: 767px)
+        margin-bottom: 0
+
+    strong
+      font-size: 25px
+      color: #545454
+      font-weight: 700
+      line-height: 1
+
+  &__info-cards
+    display: flex
+
+    @media (max-width: 479px)
+      flex-direction: column
+      align-items: center
+
+  &__info-card
+    width: 50%
+    background-color: #FFF
+    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.11)
+    border-radius: 17px
+    padding: 20px
+    height: 100px
+    display: flex
+    flex-direction: column
+    position: relative
+    margin-right: 5px
+
+    @media (max-width: 479px)
+      width: 100%
+      margin-right: 0
+      margin-bottom: 10px
+      padding: 15px
+
+    &:last-child
+      margin-right: 0
+
+  &__info-card-name
+    font-size: 16px
+    color: #545454
+    font-weight: 800
+    line-height: 1.1
+    margin-top: auto
+
+  &__info-card-icon
+    position: absolute
+    top: 20px
+    right: 20px

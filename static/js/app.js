@@ -28,6 +28,26 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 
 $(function () {
+  function initCardProjectSlider() {
+    var cardProjectSliderThumbs = new Swiper(".js-card-project-slider-thumbs", {
+      spaceBetween: 15,
+      slidesPerView: 3,
+      loop: true,
+      watchSlidesProgress: true
+    });
+    var cardProjectSlider = new Swiper(".js-card-project-slider", {
+      spaceBetween: 0,
+      loop: true,
+      thumbs: {
+        swiper: cardProjectSliderThumbs
+      }
+    });
+  }
+
+  if ($('.js-card-project-slider').length) {
+    initCardProjectSlider();
+  }
+
   function initCatalogPreviewSlider() {
     var catalogPreviewSlider = undefined;
     var windowWidth = $(window).width();

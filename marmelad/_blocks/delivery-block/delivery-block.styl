@@ -1,0 +1,125 @@
+.delivery-block
+  padding-bottom: 100px
+
+  @media (max-width: 767px)
+    padding-bottom: 50px
+
+  &__wrapper
+    display: flex
+    align-items: center
+    width: 100%
+
+    @media (max-width: 1023px)
+      flex-direction: column
+      align-items: center
+
+  &__fields
+    display: flex
+    margin-right: 100px
+
+    @media (max-width: 1279px)
+      margin-right: 50px
+
+    @media (max-width: 1023px)
+      margin-right: 0
+
+    @media (max-width: 767px)
+      flex-direction: column
+      width: 100%
+
+  &__field
+    flex: 0 0 415px
+    width: 415px
+    max-width: 415px
+    margin-right: 15px
+
+    @media (max-width: 767px)
+      flex: none
+      width: 100%
+      max-width: 100%
+      margin-bottom: 20px
+      margin-right: 0
+
+    input
+      font-size: 18px
+      color: #4F4F4F
+      font-weight: 500
+      line-height: 1
+      border: 1px solid #C8C8C8
+      background-color: transparent
+      border-radius: 12px
+      width: 100%
+      height: 50px
+      padding-right: 25px
+      padding-left: 25px
+      outline: none
+
+    ::placeholder
+      font-size: 18px
+      color: #C5C5C5
+      font-weight: 500
+      line-height: 1
+
+  &__button-submit
+    border-radius: 12px
+    padding-top: 11px
+    padding-bottom: 15px
+
+    @media (max-width: 767px)
+      display: block
+      min-width: 250px
+      margin-right: auto
+      margin-left: auto
+
+  &__cost
+    font-size: 20px
+    color: #7C7C7C
+    font-weight: 600
+    line-height: 1
+
+    @media (max-width: 1023px)
+      margin-top: 30px
+
+    @media (max-width: 413px)
+      display: flex
+      flex-direction: column
+      align-items: center
+
+    strong
+      color: #151515
+      margin-left: 20px
+
+      @media (max-width: 413px)
+        margin-left: 0
+        margin-top: 15px
+
+  &__map
+    margin-top: 25px
+
+  &__bottom
+    margin-top: 75px
+
+    @media (max-width: 767px)
+      margin-top: 50px
+
+  &__text
+    max-width: 880px
+    width: 100%
+    text-align: center
+    margin-right: auto
+    margin-left: auto
+
+    p
+      font-weight: 500
+      color: #5E5E5E
+      font-size: 20px
+      line-height: 1.4
+      margin-bottom: 30px
+
+      &:last-child
+        margin-bottom: 0
+
+      strong
+        @media (max-width: 767px)
+          margin-bottom: 30px
+          display: block

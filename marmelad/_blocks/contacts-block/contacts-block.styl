@@ -1,0 +1,195 @@
+.contacts-block
+  position: relative
+  margin-top: -105px
+  padding-bottom: 60px
+
+  @media (max-width: 959px)
+    margin-top: -65px
+
+  &__map
+    width: 100%
+    height: 740px
+
+    @media (max-width: 959px)
+      height: 450px
+
+  .ymaps-2-1-79-ground-pane
+    filter: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"grayscale\"><feColorMatrix type=\"matrix\" values=\"0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\"/></filter></svg>#grayscale')
+    filter: grayscale(100%)
+
+  &__wrapper
+    width: 1170px
+    position: absolute
+    top: 0
+    padding-top: 125px
+    display: flex
+    justify-content: space-between
+
+    @media (max-width: 1279px)
+      width: 900px
+
+    @media (max-width: 959px)
+      flex-direction: column
+      align-items: center
+      padding-top: 60px
+      height: 740px
+      width: 100%
+      margin-left: -15px
+
+  &__info
+    color: #fff
+    padding: 50px 75px 50px 85px
+    background-color: #A49777
+    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.17)
+    border-radius: 25px
+    max-width: 455px
+
+    @media (max-width: 959px)
+      margin-top: auto
+
+    @media (max-width: 767px)
+      padding: 30px
+
+  &__title
+    font-size: 28px
+    color: #FFF
+    font-weight: 700
+    line-height: 1.2
+    margin-bottom: 30px
+
+    @media (max-width: 767px)
+      font-size: 22px
+
+  &__item
+    font-size: 18px
+    color: #FFF
+    font-weight: 500
+    line-height: 1.1
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+
+    @media (max-width: 767px)
+      font-size: 16px
+
+    .svg-icon
+      margin-right: 20px
+
+    a
+      font-size: 18px
+      color: #FFF
+      font-weight: 500
+      line-height: 1.1
+      text-decoration: none
+
+      @media (max-width: 767px)
+        font-size: 16px
+
+  &__socials
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 50px
+
+  &__social-link
+    flex: 0 0 25px
+    width: 25px
+    max-width: 25px
+    height: 25px
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: 0 0
+    margin-right: 15px
+    transition: background 0.3s, ease 0.3s
+
+    @media (max-width: 767px)
+      flex: 0 0 25px
+      width: 25px
+      max-width: 25px
+      height: 25px
+      margin-right: 15px
+
+    &--whatsapp
+      background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.5034 0H13.4966C6.05306 0 0 6.05475 0 13.5C0 16.4531 0.95175 19.1903 2.57006 21.4127L0.887625 26.4279L6.07669 24.7691C8.21138 26.1833 10.7578 27 13.5034 27C20.9469 27 27 20.9436 27 13.5C27 6.05644 20.9469 0 13.5034 0ZM21.3587 19.0637C21.033 19.9834 19.7404 20.7461 18.7093 20.9689C18.0039 21.1191 17.0826 21.2389 13.9809 19.953C10.0136 18.3094 7.45875 14.2779 7.25962 14.0164C7.06894 13.7548 5.6565 11.8817 5.6565 9.94444C5.6565 8.00719 6.64031 7.06388 7.03688 6.65887C7.36256 6.32644 7.90088 6.17456 8.41725 6.17456C8.58431 6.17456 8.7345 6.183 8.8695 6.18975C9.26606 6.20662 9.46519 6.23025 9.72675 6.85631C10.0524 7.641 10.8456 9.57825 10.9401 9.77738C11.0363 9.9765 11.1324 10.2465 10.9974 10.5081C10.8709 10.7781 10.7595 10.8979 10.5604 11.1274C10.3612 11.3569 10.1722 11.5324 9.97312 11.7788C9.79087 11.9931 9.585 12.2226 9.8145 12.6191C10.044 13.0072 10.8371 14.3016 12.0049 15.3411C13.5118 16.6826 14.7336 17.1112 15.1706 17.2935C15.4963 17.4285 15.8844 17.3964 16.1224 17.1433C16.4244 16.8176 16.7974 16.2776 17.1771 15.7461C17.4471 15.3647 17.7879 15.3174 18.1457 15.4524C18.5102 15.579 20.439 16.5324 20.8356 16.7299C21.2321 16.929 21.4937 17.0235 21.5899 17.1906C21.6844 17.3576 21.6844 18.1423 21.3587 19.0637Z' fill='white'/%3E%3C/svg%3E%0A")
+
+      &:hover
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5026 0H10.4974C4.70794 0 0 4.70925 0 10.5C0 12.7969 0.74025 14.9258 1.99894 16.6543L0.690375 20.5551L4.72631 19.2649C6.38663 20.3648 8.36719 21 10.5026 21C16.2921 21 21 16.2894 21 10.5C21 4.71056 16.2921 0 10.5026 0ZM16.6123 14.8273C16.359 15.5426 15.3536 16.1359 14.5517 16.3091C14.0031 16.4259 13.2864 16.5191 10.8741 15.519C7.78837 14.2406 5.80125 11.1051 5.64638 10.9016C5.49806 10.6982 4.3995 9.24131 4.3995 7.73456C4.3995 6.22781 5.16469 5.49413 5.47313 5.17913C5.72644 4.92056 6.14512 4.80244 6.54675 4.80244C6.67669 4.80244 6.7935 4.809 6.8985 4.81425C7.20694 4.82737 7.36181 4.84575 7.56525 5.33269C7.81856 5.943 8.43544 7.44975 8.50894 7.60463C8.58375 7.7595 8.65856 7.9695 8.55356 8.17294C8.45513 8.38294 8.3685 8.47612 8.21362 8.65462C8.05875 8.83312 7.91175 8.96963 7.75687 9.16125C7.61512 9.32794 7.455 9.50644 7.6335 9.81488C7.812 10.1168 8.42887 11.1234 9.33712 11.9319C10.5092 12.9754 11.4594 13.3088 11.7994 13.4505C12.0527 13.5555 12.3546 13.5306 12.5396 13.3337C12.7746 13.0804 13.0646 12.6604 13.3599 12.2469C13.5699 11.9503 13.8351 11.9136 14.1133 12.0186C14.3968 12.117 15.897 12.8586 16.2054 13.0121C16.5139 13.167 16.7173 13.2405 16.7921 13.3704C16.8656 13.5004 16.8656 14.1107 16.6123 14.8273Z' fill='%23000'/%3E%3C/svg%3E%0A")
+
+    &--telegram
+      background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 28C21.732 28 28 21.732 28 14C28 6.26801 21.732 0 14 0C6.26801 0 0 6.26801 0 14C0 21.732 6.26801 28 14 28Z' fill='white'/%3E%3Cpath d='M6.69844 13.3669L20.001 8.06489C20.6184 7.83432 21.1576 8.22059 20.9576 9.18567L20.9587 9.18448L18.6937 20.2151C18.5259 20.9972 18.0763 21.1874 17.4474 20.8189L13.9982 18.1911L12.3345 19.8479C12.1505 20.0381 11.9953 20.1985 11.6389 20.1985L11.8838 16.57L18.2764 10.6C18.5546 10.3469 18.2143 10.2042 17.8475 10.4562L9.94762 15.5977L6.54207 14.4995C5.80279 14.2571 5.78669 13.7353 6.69844 13.3669V13.3669Z' fill='%23A49777'/%3E%3C/svg%3E%0A")
+
+      &:hover
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22Z' fill='%23000'/%3E%3Cpath d='M5.03341 10.7619L15.6392 6.67261C16.1315 6.49477 16.5614 6.79269 16.4019 7.53702L16.4028 7.53611L14.597 16.0437C14.4632 16.6469 14.1047 16.7935 13.6033 16.5094L10.8533 14.4826L9.52691 15.7604C9.38025 15.9071 9.2565 16.0309 8.97233 16.0309L9.16758 13.2323L14.2642 8.62786C14.4861 8.43261 14.2147 8.32261 13.9223 8.51694L7.62391 12.4824L4.90875 11.6354C4.31933 11.4484 4.3065 11.046 5.03341 10.7619Z' fill='%23A49777'/%3E%3C/svg%3E%0A")
+
+    &--instagram
+      background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='14' fill='white'/%3E%3Cpath d='M17 6H11C8.239 6 6 8.239 6 11V17C6 19.761 8.239 22 11 22H17C19.761 22 22 19.761 22 17V11C22 8.239 19.761 6 17 6ZM20.5 17C20.5 18.93 18.93 20.5 17 20.5H11C9.07 20.5 7.5 18.93 7.5 17V11C7.5 9.07 9.07 7.5 11 7.5H17C18.93 7.5 20.5 9.07 20.5 11V17Z' fill='%23A49777'/%3E%3Cpath d='M14 10C11.791 10 10 11.791 10 14C10 16.209 11.791 18 14 18C16.209 18 18 16.209 18 14C18 11.791 16.209 10 14 10ZM14 16.5C12.622 16.5 11.5 15.378 11.5 14C11.5 12.621 12.622 11.5 14 11.5C15.378 11.5 16.5 12.621 16.5 14C16.5 15.378 15.378 16.5 14 16.5Z' fill='%23A49777'/%3E%3Cpath d='M18.2986 10.233C18.593 10.233 18.8316 9.99436 18.8316 9.69999C18.8316 9.40562 18.593 9.16699 18.2986 9.16699C18.0043 9.16699 17.7656 9.40562 17.7656 9.69999C17.7656 9.99436 18.0043 10.233 18.2986 10.233Z' fill='%23A49777'/%3E%3C/svg%3E%0A")
+
+      &:hover
+        background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='14' fill='%23000'/%3E%3Cpath d='M17 6H11C8.239 6 6 8.239 6 11V17C6 19.761 8.239 22 11 22H17C19.761 22 22 19.761 22 17V11C22 8.239 19.761 6 17 6ZM20.5 17C20.5 18.93 18.93 20.5 17 20.5H11C9.07 20.5 7.5 18.93 7.5 17V11C7.5 9.07 9.07 7.5 11 7.5H17C18.93 7.5 20.5 9.07 20.5 11V17Z' fill='%23A49777'/%3E%3Cpath d='M14 10C11.791 10 10 11.791 10 14C10 16.209 11.791 18 14 18C16.209 18 18 16.209 18 14C18 11.791 16.209 10 14 10ZM14 16.5C12.622 16.5 11.5 15.378 11.5 14C11.5 12.621 12.622 11.5 14 11.5C15.378 11.5 16.5 12.621 16.5 14C16.5 15.378 15.378 16.5 14 16.5Z' fill='%23A49777'/%3E%3Cpath d='M18.2986 10.233C18.593 10.233 18.8316 9.99436 18.8316 9.69999C18.8316 9.40562 18.593 9.16699 18.2986 9.16699C18.0043 9.16699 17.7656 9.40562 17.7656 9.69999C17.7656 9.99436 18.0043 10.233 18.2986 10.233Z' fill='%23A49777'/%3E%3C/svg%3E%0A")
+
+  &__call
+    width: 230px
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+
+    @media (max-width: 959px)
+      order: -1
+
+    a
+      margin-bottom: 20px
+
+    span
+      font-size: 18px
+      color: #3E3E3E
+      line-height: 1.1
+      font-weight: 500
+
+      br
+        @media (max-width: 959px)
+          display: none
+
+
+  &__bottom
+    margin-top: 45px
+
+    @media (max-width: 959px)
+      padding-top: 300px
+
+  &__content
+    max-width: 800px
+    width: 100%
+    display: flex
+    margin-right: auto
+    margin-left: auto
+
+    @media (max-width: 767px)
+      display: block
+
+  &__data-info
+    width: 50%
+    margin-right: 70px
+
+    @media (max-width: 767px)
+      width: 100%
+      margin-right: 0
+      margin-bottom: 50px
+
+    &:last-child
+      margin-right: 0
+      margin-bottom: 0
+
+    strong
+      font-size: 22px
+      color: #373737
+      font-weight: 700
+      line-height: 1.1
+      display: block
+      margin-bottom: 20px
+
+    p
+      font-size: 20px
+      color: #636363
+      font-weight: 500
+      line-height: 1.4

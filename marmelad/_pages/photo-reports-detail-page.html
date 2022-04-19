@@ -1,0 +1,30 @@
+= yaml =
+pageTitle: Строительство каркасной двухэтажной бани по индивидуальному проекту в Сортавала
+bodyClasses:
+layout: !!map
+  header: true
+  footer: true
+  left: false
+  right: false
+path: [
+  {"title": Главная},
+  {"title": Фотоотчеты},
+]
+= yaml =
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+
+  <div block="inner-page-head">
+    <div elem="section" class="contain">
+      {% include "s-path.html" %}
+    </div>
+  </div>
+
+  {% include "photo-reports-card.html" %}
+
+  {% include "contacts-form.html" %}
+
+{% endblock %}

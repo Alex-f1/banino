@@ -2147,6 +2147,206 @@ p {
   font-weight: 500;
   line-height: 1.1;
 }
+.photo-reports-card {
+  padding-bottom: 60px;
+}
+.photo-reports-card__wrapper {
+  max-width: 1055px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+}
+.photo-reports-card__preview {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 500px;
+          flex: 0 0 500px;
+  width: 500px;
+  max-width: 500px;
+}
+.photo-reports-card__container {
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 61px;
+  padding-bottom: 55px;
+}
+.photo-reports-card__container .swiper-button-prev,
+.photo-reports-card__container .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-top: -25px;
+  background-color: #a49777;
+}
+.photo-reports-card__container .swiper-button-prev {
+  left: 0;
+}
+.photo-reports-card__container .swiper-button-next {
+  right: 0;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+.photo-reports-card__item {
+  overflow: hidden;
+  border-radius: 61px;
+  -webkit-overflow-scrolling: touch;
+}
+.photo-reports-card__img {
+  width: 100%;
+}
+.photo-reports-card__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: top;
+}
+.photo-reports-card__info {
+  padding-left: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.photo-reports-card__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 35px;
+}
+.photo-reports-card__link-catalog {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  text-decoration: none;
+  background-color: #a49777;
+  border-radius: 8px;
+  width: 185px;
+  padding: 4px 5px 9px 5px;
+  margin-right: 30px;
+  -webkit-transition: background-color 0.3s, ease 0.3s;
+  transition: background-color 0.3s, ease 0.3s;
+}
+.photo-reports-card__link-catalog:hover {
+  background-color: #ff9b04;
+}
+.photo-reports-card__play {
+  font-size: 20px;
+  color: #a49777;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: color 0.3s, ease 0.3s;
+  transition: color 0.3s, ease 0.3s;
+}
+.photo-reports-card__play:hover {
+  color: #de8c10;
+}
+.photo-reports-card__play .svg-icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 36px;
+          flex: 0 0 36px;
+  width: 36px;
+  max-width: 36px;
+  height: 36px;
+  margin-left: 15px;
+}
+.photo-reports-card__name {
+  font-size: 28px;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+.photo-reports-card__address {
+  font-size: 20px;
+  color: #797979;
+  font-weight: 500;
+  line-height: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+.photo-reports-card__address .svg-icon {
+  fill: #a49777;
+  margin-right: 15px;
+}
+.photo-reports-card__info-data {
+  max-width: 350px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.photo-reports-card__info-data span {
+  font-size: 20px;
+  color: #c9c9c9;
+  font-weight: 500;
+  line-height: 1.2;
+  display: block;
+  margin-bottom: 15px;
+}
+.photo-reports-card__info-data strong {
+  font-size: 18px;
+  color: #2d2d2d;
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+}
+.photo-reports-card__review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 780px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.photo-reports-card__review-name {
+  font-size: 25px;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 140px;
+          flex: 0 0 140px;
+  width: 140px;
+  max-width: 140px;
+}
+.photo-reports-card__review-text {
+  font-size: 20px;
+  color: #797979;
+  font-weight: 500;
+  line-height: 1.5;
+}
 .photo-reports__head {
   margin-bottom: 50px;
 }
@@ -2958,6 +3158,12 @@ p {
   .our-works__container:after {
     display: none;
   }
+  .photo-reports-card {
+    padding-bottom: 30px;
+  }
+  .photo-reports-card__info {
+    padding-left: 50px;
+  }
   .photo-reports__item {
     width: 50%;
   }
@@ -3007,6 +3213,9 @@ p {
   }
   .logo__desc {
     display: none;
+  }
+  .photo-reports-card__info {
+    padding-left: 25px;
   }
 }
 @media (max-width: 959px) {
@@ -3115,6 +3324,26 @@ p {
   }
   .our-advantages__name {
     font-size: 15px;
+  }
+  .photo-reports-card__wrapper {
+    display: block;
+  }
+  .photo-reports-card__preview {
+    width: 100%;
+    max-width: 100%;
+  }
+  .photo-reports-card__container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .photo-reports-card__info {
+    padding-left: 0;
+  }
+  .photo-reports-card__buttons {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    margin-top: 30px;
   }
 }
 @media (max-width: 767px) {
@@ -3605,6 +3834,18 @@ p {
   .other-projects__item {
     width: 100%;
   }
+  .photo-reports-card__name {
+    font-size: 22px;
+  }
+  .photo-reports-card__review {
+    display: block;
+    text-align: center;
+  }
+  .photo-reports-card__review-name {
+    width: auto;
+    max-width: none;
+    margin-bottom: 25px;
+  }
   .product-preview__nav-slider {
     display: none;
   }
@@ -3677,6 +3918,12 @@ p {
   }
   .contacts-form__privacy-policy .checkbox-name:before {
     margin-right: 10px;
+  }
+  .photo-reports-card__container {
+    border-radius: 27px;
+  }
+  .photo-reports-card__item {
+    border-radius: 27px;
   }
 }
 @media (max-width: 413px) {

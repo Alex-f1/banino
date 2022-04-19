@@ -96,18 +96,11 @@ $(function () {
       zoom: 15,
       controls: []
     });
-    mapContacts.behaviors.disable('scrollZoom'); // Создадим метку.
-
+    mapContacts.behaviors.disable('scrollZoom');
     var myPlacemark = new ymaps.Placemark(mapContacts.getCenter(), {}, {
-      // Опции.
-      // Необходимо указать данный тип макета.
       iconLayout: 'default#image',
-      // Своё изображение иконки метки.
       iconImageHref: 'img/location-icon2.svg',
-      // Размеры метки.
       iconImageSize: [93, 93],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
       iconImageOffset: [-5, -38]
     });
     mapContacts.geoObjects.add(myPlacemark);
@@ -119,6 +112,14 @@ $(function () {
     }
   });
   $('.phone-mask').mask('+7 (000) 000-00-00');
+  ymaps.ready(function () {
+    var mapDelivery = new ymaps.Map("map_delivery", {
+      center: [55.770785, 37.660368],
+      zoom: 15,
+      controls: []
+    });
+    mapDelivery.behaviors.disable('scrollZoom');
+  });
 
   function initEquipmentSlider() {
     var equipmentSliderThumbs = new Swiper(".js-equipment-slider-thumbs", {

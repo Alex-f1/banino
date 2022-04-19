@@ -882,6 +882,35 @@ p {
 .inner-page-head h1 {
   margin-bottom: 45px;
 }
+.policy-block {
+  padding-bottom: 140px;
+}
+.policy-block strong {
+  font-size: 18px;
+  color: #434343;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: block;
+}
+.policy-block p {
+  font-size: 14px;
+  color: #929292;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+.policy-block p a {
+  font-size: 14px;
+  color: #929292;
+  font-weight: 500;
+  line-height: 1.1;
+  text-decoration: none;
+}
+.policy-block p a:hover {
+  text-decoration: underline;
+}
 .card-project {
   padding-bottom: 60px;
 }
@@ -3341,6 +3370,9 @@ p {
   }
   .content-block {
     padding-top: 30px;
+  }
+  .policy-block {
+    padding-bottom: 70px;
   }
   .card-project__body {
     padding-right: 20px;

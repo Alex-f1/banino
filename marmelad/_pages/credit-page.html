@@ -1,0 +1,30 @@
+= yaml =
+pageTitle: Кредит
+bodyClasses:
+layout: !!map
+  header: true
+  footer: true
+  left: false
+  right: false
+path: [
+  {"title": Главная},
+]
+= yaml =
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+
+  <div block="inner-page-head">
+    <div elem="section" class="contain">
+      {% include "s-path.html" %}
+      <h1>Кредит</h1>
+    </div>
+  </div>
+
+  {% include "credit-block.html" %}
+
+  {% include "contacts-form.html" %}
+
+{% endblock %}

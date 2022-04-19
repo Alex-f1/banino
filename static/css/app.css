@@ -1688,6 +1688,129 @@ p {
 .contacts-form__img img {
   vertical-align: top;
 }
+.credit-block {
+  -webkit-box-shadow: 0px -45px 43px rgba(0,0,0,0.03);
+          box-shadow: 0px -45px 43px rgba(0,0,0,0.03);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.credit-block__head {
+  max-width: 1030px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 55px;
+}
+.credit-block__title {
+  font-size: 52px;
+  color: #a49777;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 650px;
+  width: 100%;
+}
+.credit-block__logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 190px;
+          flex: 0 0 190px;
+  width: 190px;
+  max-width: 190px;
+  margin-left: auto;
+}
+.credit-block__logo img {
+  vertical-align: top;
+}
+.credit-block__content {
+  max-width: 1030px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.credit-block__terms {
+  margin-bottom: 90px;
+}
+.credit-block__terms-title {
+  font-size: 28px;
+  color: #9a9a9a;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+.credit-block__terms-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.credit-block__terms-item {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: center;
+  padding: 15px 45px 18px 45px;
+  background-color: #a49777;
+  -webkit-box-shadow: 12px 7px 15px rgba(0,0,0,0.07);
+          box-shadow: 12px 7px 15px rgba(0,0,0,0.07);
+  border-radius: 13px;
+  margin-right: 5px;
+}
+.credit-block__terms-item:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.credit-block__lists strong {
+  font-size: 30px;
+  color: #676767;
+  font-weight: 800;
+  line-height: 1.1;
+  display: block;
+  margin-bottom: 30px;
+}
+.credit-block__lists ul {
+  list-style: none;
+  background-color: #fff;
+  -webkit-box-shadow: inset 5px 7px 16px rgba(0,0,0,0.07);
+          box-shadow: inset 5px 7px 16px rgba(0,0,0,0.07);
+  border-radius: 33px;
+  padding: 55px;
+  margin-bottom: 65px;
+}
+.credit-block__lists ul li {
+  font-size: 20px;
+  color: #939393;
+  font-weight: 500;
+  line-height: 1.3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 15px;
+}
+.credit-block__lists ul li:before {
+  content: '';
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 17px;
+          flex: 0 0 17px;
+  width: 17px;
+  max-width: 17px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='14' viewBox='0 0 17 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6.95L6.03448 11L15 2' stroke='%23A49777' stroke-width='3'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  margin-right: 10px;
+}
 .equipment-block {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -3147,6 +3270,10 @@ p {
     width: 360px;
     height: auto;
   }
+  .credit-block__terms-item {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
   .equipment-block {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -3250,6 +3377,25 @@ p {
 @media (max-width: 1023px) {
   .card-project__links {
     display: none;
+  }
+  .credit-block {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .credit-block__head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .credit-block__logo {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-right: auto;
   }
   .logo__desc {
     display: none;
@@ -3628,6 +3774,28 @@ p {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 35px;
+  }
+  .credit-block__title {
+    font-size: 30px;
+  }
+  .credit-block__terms {
+    margin-bottom: 50px;
+  }
+  .credit-block__terms-items {
+    display: block;
+  }
+  .credit-block__terms-item {
+    margin-bottom: 20px;
+    margin-right: 0;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  .credit-block__lists ul {
+    padding: 35px 15px;
+    margin-bottom: 40px;
+  }
+  .credit-block__lists ul li {
+    font-size: 16px;
   }
   .equipment-block__inner {
     padding-right: 0;

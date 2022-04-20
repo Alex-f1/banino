@@ -90,36 +90,43 @@ $(function () {
   $('.js-choose-surface').on('click', function () {
     $(this).addClass('_is-active').siblings().removeClass('_is-active');
   });
-  ymaps.ready(function () {
-    var mapContacts = new ymaps.Map("map_contacts", {
-      center: [55.770785, 37.660368],
-      zoom: 15,
-      controls: []
-    });
-    mapContacts.behaviors.disable('scrollZoom');
-    var myPlacemark = new ymaps.Placemark(mapContacts.getCenter(), {}, {
-      iconLayout: 'default#image',
-      iconImageHref: 'img/location-icon2.svg',
-      iconImageSize: [93, 93],
-      iconImageOffset: [-5, -38]
-    });
-    mapContacts.geoObjects.add(myPlacemark);
 
-    if (mapContacts) {
-      ymaps.modules.require(['Placemark', 'Circle'], function (Placemark, Circle) {
-        var placemark = new Placemark([55.770785, 37.660368]);
+  if ($('#map_contacts').length) {
+    ymaps.ready(function () {
+      var mapContacts = new ymaps.Map("map_contacts", {
+        center: [55.770785, 37.660368],
+        zoom: 15,
+        controls: []
       });
-    }
-  });
-  $('.phone-mask').mask('+7 (000) 000-00-00');
-  ymaps.ready(function () {
-    var mapDelivery = new ymaps.Map("map_delivery", {
-      center: [55.770785, 37.660368],
-      zoom: 15,
-      controls: []
+      mapContacts.behaviors.disable('scrollZoom');
+      var myPlacemark = new ymaps.Placemark(mapContacts.getCenter(), {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/location-icon2.svg',
+        iconImageSize: [93, 93],
+        iconImageOffset: [-5, -38]
+      });
+      mapContacts.geoObjects.add(myPlacemark);
+
+      if (mapContacts) {
+        ymaps.modules.require(['Placemark', 'Circle'], function (Placemark, Circle) {
+          var placemark = new Placemark([55.770785, 37.660368]);
+        });
+      }
     });
-    mapDelivery.behaviors.disable('scrollZoom');
-  });
+  }
+
+  $('.phone-mask').mask('+7 (000) 000-00-00');
+
+  if ($('#map_delivery').length) {
+    ymaps.ready(function () {
+      var mapDelivery = new ymaps.Map("map_delivery", {
+        center: [55.770785, 37.660368],
+        zoom: 15,
+        controls: []
+      });
+      mapDelivery.behaviors.disable('scrollZoom');
+    });
+  }
 
   function initEquipmentSlider() {
     var equipmentSliderThumbs = new Swiper(".js-equipment-slider-thumbs", {
@@ -155,27 +162,71 @@ $(function () {
     initEquipmentSlider();
   }
 
-  ymaps.ready(function () {
-    var featureMap = new ymaps.Map("feature_map", {
-      center: [55.770785, 37.660368],
-      zoom: 15,
-      controls: []
-    });
-    featureMap.behaviors.disable('scrollZoom');
-    var myPlacemark = new ymaps.Placemark(featureMap.getCenter(), {}, {
-      iconLayout: 'default#image',
-      iconImageHref: 'img/location-icon.svg',
-      iconImageSize: [65, 65],
-      iconImageOffset: [-5, -38]
-    });
-    featureMap.geoObjects.add(myPlacemark);
+  if ($('#feature_map').length) {
+    ymaps.ready(function () {
+      var featureMap = new ymaps.Map("feature_map", {
+        center: [55.770785, 37.660368],
+        zoom: 15,
+        controls: []
+      }),
+          MyBalloonLayout = ymaps.templateLayoutFactory.createClass('<div class="popover">' + '<div class="popover-inner">' + '$[[options.contentLayout observeSize minWidth=270 maxWidth=270 maxHeight=335]]' + '</div>' + '</div>', {
+        build: function build() {
+          this.constructor.superclass.build.call(this);
+          this._$element = $('.popover', this.getParentElement());
+          this.applyElementOffset();
+        },
+        onSublayoutSizeChange: function onSublayoutSizeChange() {
+          MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
 
-    if (featureMap) {
-      ymaps.modules.require(['Placemark', 'Circle'], function (Placemark, Circle) {
-        var placemark = new Placemark([55.770785, 37.660368]);
+          if (!this._isElement(this._$element)) {
+            return;
+          }
+
+          this.applyElementOffset();
+          this.events.fire('shapechange');
+        },
+        applyElementOffset: function applyElementOffset() {
+          this._$element.css({
+            left: -(this._$element[0].offsetWidth / 2),
+            top: -(this._$element[0].offsetHeight + this._$element.find('.popup-map-thumb')[0].offsetHeight)
+          });
+        },
+        onCloseClick: function onCloseClick(e) {
+          e.preventDefault();
+          this.events.fire('userclose');
+        },
+        getShape: function getShape() {
+          if (!this._isElement(this._$element)) {
+            return MyBalloonLayout.superclass.getShape.call(this);
+          }
+
+          var position = this._$element.position();
+
+          return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([[position.left, position.top], [position.left + this._$element[0].offsetWidth, position.top + this._$element[0].offsetHeight + this._$element.find('.popup-map-thumb')[0].offsetHeight]]));
+        },
+        _isElement: function _isElement(element) {
+          return element && element[0] && element.find('.popup-map-thumb')[0];
+        }
+      }),
+          // Создание вложенного макета содержимого балуна.
+      MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass('<div class="popup-map-thumb">' + '<div class="popup-map-thumb__body">' + '<div class="popup-map-thumb__img">' + '<img src="img/photo-reports-img3.jpg" alt="">' + '</div>' + '<div class="popup-map-thumb__content">' + '<div class="popup-map-thumb__name">Баня бочка тип 1</div>' + '<div class="popup-map-thumb__text">Московская область, деревня Посевки</div>' + '<a class="popup-map-thumb__link-show button-default button-default--large" href="#">' + 'Смотреть проект' + '</a>' + '</div>' + '</div>' + '</div>'),
+          myPlacemark = new ymaps.Placemark(featureMap.getCenter(), {}, {
+        balloonShadow: false,
+        balloonLayout: MyBalloonLayout,
+        balloonContentLayout: MyBalloonContentLayout,
+        balloonPanelMaxMapArea: 0,
+        hideIconOnBalloonOpen: false,
+        balloonOffset: [35, -290],
+        iconLayout: 'default#image',
+        iconImageHref: 'img/location-icon.svg',
+        iconImageSize: [65, 65],
+        iconImageOffset: [1, 1]
       });
-    }
-  });
+      featureMap.geoObjects.add(myPlacemark);
+      featureMap.behaviors.disable('scrollZoom');
+    });
+  }
+
   $('.js-filter-buttons').on('click', function (event) {
     event.preventDefault();
     $(this).addClass('_is-active').siblings().removeClass('_is-active');

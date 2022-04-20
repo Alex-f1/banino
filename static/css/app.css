@@ -168,12 +168,47 @@ template {
   width: inherit;
   height: inherit;
 }
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../fonts/PlayfairDisplay-Bold.woff2") format('woff2'), url("../fonts/PlayfairDisplay-Bold.woff") format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../fonts/PlayfairDisplay-SemiBold.woff2") format('woff2'), url("../fonts/PlayfairDisplay-SemiBold.woff") format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../fonts/PlayfairDisplay-Regular.woff2") format('woff2'), url("../fonts/PlayfairDisplay-Regular.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../fonts/PlayfairDisplay-Medium.woff2") format('woff2'), url("../fonts/PlayfairDisplay-Medium.woff") format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../fonts/PlayfairDisplay-ExtraBold.woff2") format('woff2'), url("../fonts/PlayfairDisplay-ExtraBold.woff") format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
 * {
   min-width: 0;
   min-height: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(226,176,176,0);
 }
 *::before,
 *::after {

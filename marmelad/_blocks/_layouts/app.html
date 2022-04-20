@@ -58,6 +58,24 @@
 				smoothscroll: 'js/vendors/smoothscroll.polyfill-0.4.4.js',
 			}
 		</script>
+
+        {% include "popup-form.html" %}
+        
+        <div block="popup-status"class="remodal" data-remodal-id="success">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div elem="section">
+                <div elem="logo">
+                    <img src="img/logo.svg" alt="">
+                </div>
+                <div elem="desc">
+                    Благодарим за доверие!<br>
+                    Мы свяжемся с вами в ближайшее время
+                </div>
+                <button elem="button-ok" data-remodal-action="close" class="button-default" type="button">
+                    Заявка отправлена
+                </button>
+            </div>
+        </div><!-- popup-success -->
         
         
         <script src="js/vendors/jquery-3.6.0.min.js"></script>

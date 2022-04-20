@@ -57,7 +57,7 @@
                   <a href="#" class="header-contacts__social-link header-contacts__social-link--telegram"></a>
                 </div>
                 <a href="tel:+88003330477" class="header-contacts__phone">8 (800) 333-04-77</a>
-                <a href="#" class="header-contacts__call">Заказать звонок</a>
+                <a href="#" data-remodal-target="request" class="header-contacts__call">Заказать звонок</a>
                 <button class="button-burger js-button-burger">
                   <span></span>
                 </button>
@@ -220,7 +220,7 @@
 </div><!-- logo -->
         <div class="footer__contacts">
           <a href="#" class="footer__phone">8 (800) 333-04-77</a>
-          <a class="footer__button-call button-default" href="#">Заказать звонок</a>
+          <a class="footer__button-call button-default" data-remodal-target="request" href="#">Заказать звонок</a>
         </div>
       </div>
       <div class="footer__middle">
@@ -265,6 +265,82 @@
 				smoothscroll: 'js/vendors/smoothscroll.polyfill-0.4.4.js',
 			}
 		</script>
+
+        <div class="popup-form remodal p-5" data-remodal-id="request">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <div class="popup-form__section">
+    <div class="contacts-form">
+      <div class="contacts-form__section">
+        <div class="contacts-form__wrapper">
+          <form class="contacts-form__form">
+            <div class="contacts-form__head">
+              <div class="contacts-form__title">
+                Оставьте заявку
+              </div>
+              <div class="contacts-form__desc">
+                Наш менеджер перезвонит вам и ответит на вопросы
+              </div>
+            </div>
+            <div class="contacts-form__fields">
+              <div class="contacts-form__field">
+                
+      <i class="svg-icon svg-icon--user-icon" aria-hidden="true">
+        <svg class="svg-icon__link">
+          <use xlink:href="#user-icon"></use>
+        </svg>
+      </i>
+    
+                <input type="text" placeholder="Ваше имя*" required="">
+              </div>
+              <div class="contacts-form__field">
+                
+      <i class="svg-icon svg-icon--phone-icon" aria-hidden="true">
+        <svg class="svg-icon__link">
+          <use xlink:href="#phone-icon"></use>
+        </svg>
+      </i>
+    
+                <input type="tel" class="phone-mask" placeholder="+7 (___) ___-__-__*" required="">
+              </div>
+            </div>
+            <div class="contacts-form__bottom">
+              <button class="contacts-form__button-submit button-default button-default--large" type="submit">
+                Отправить
+              </button>
+              <label class="contacts-form__privacy-policy">
+                <input type="checkbox">
+                <span class="checkbox-name">
+                  <span>Я принимаю условия<br>
+                    <a href="#">политики конфиденциальности</a>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><!-- contacts-form -->
+
+  </div>
+</div><!-- popup-form -->
+
+
+        
+        <div class="popup-status remodal" data-remodal-id="success">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div class="popup-status__section">
+                <div class="popup-status__logo">
+                    <img src="img/logo.svg" alt="">
+                </div>
+                <div class="popup-status__desc">
+                    Благодарим за доверие!<br>
+                    Мы свяжемся с вами в ближайшее время
+                </div>
+                <button data-remodal-action="close" class="popup-status__button-ok button-default" type="button">
+                    Заявка отправлена
+                </button>
+            </div>
+        </div><!-- popup-success -->
         
         
         <script src="js/vendors/jquery-3.6.0.min.js"></script>

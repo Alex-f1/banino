@@ -1,0 +1,46 @@
+<div block="popup-form" class="remodal p-5" data-remodal-id="request">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <div elem="section">
+    <div block="contacts-form">
+      <div elem="section">
+        <div elem="wrapper">
+          <form elem="form">
+            <div elem="head">
+              <div elem="title">
+                Оставьте заявку
+              </div>
+              <div elem="desc">
+                Наш менеджер перезвонит вам и ответит на вопросы
+              </div>
+            </div>
+            <div elem="fields">
+              <div elem="field">
+                {{ _icon('user-icon', { tag: 'i' }) }}
+                <input type="text" placeholder="Ваше имя*" required>
+              </div>
+              <div elem="field">
+                {{ _icon('phone-icon', { tag: 'i' }) }}
+                <input type="tel" class="phone-mask" placeholder="+7 (___) ___-__-__*" required>
+              </div>
+            </div>
+            <div elem="bottom">
+              <button elem="button-submit" class="button-default button-default--large" type="submit">
+                Отправить
+              </button>
+              <label elem="privacy-policy">
+                <input type="checkbox">
+                <span class="checkbox-name">
+                  <span>Я принимаю условия<br>
+                    <a href="#">политики конфиденциальности</a>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><!-- contacts-form -->
+
+  </div>
+</div><!-- popup-form -->
+

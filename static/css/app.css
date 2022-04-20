@@ -610,6 +610,9 @@ body {
   background-color: #e5e5e5;
   background-repeat: no-repeat;
 }
+body.page-404 {
+  background-color: #fff;
+}
 h1,
 h2,
 h3,
@@ -910,6 +913,90 @@ p {
 }
 .policy-block p a:hover {
   text-decoration: underline;
+}
+.error-404 {
+  padding-top: 60px;
+  padding-bottom: 150px;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.error-404__wrapper {
+  position: relative;
+  max-width: 785px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.error-404__title {
+  font-size: 265px;
+  color: #a49777;
+  font-weight: 400;
+  line-height: 1;
+  text-shadow: 18px 16px 16px rgba(0,0,0,0.17);
+  margin-bottom: 60px;
+}
+.error-404__desc {
+  font-weight: 700;
+  color: #a49777;
+  font-size: 28px;
+  line-height: 1.1;
+}
+.error-404__note {
+  font-size: 22px;
+  color: #ababab;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.error-404__note:after {
+  content: '';
+  width: 32px;
+  height: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='16' fill='%23F24A4A'/%3E%3Crect x='11.7578' y='13.1714' width='2' height='10' transform='rotate(-45 11.7578 13.1714)' fill='white'/%3E%3Crect x='13.1719' y='20.2427' width='2' height='10' transform='rotate(-135 13.1719 20.2427)' fill='white'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-transform: translate(-5px, -10px);
+          transform: translate(-5px, -10px);
+}
+.error-404__img {
+  width: 100%;
+}
+.error-404__img img {
+  vertical-align: top;
+}
+.error-404__links {
+  margin-top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 5;
+}
+.error-404__links a {
+  font-size: 18px;
+  color: #535353;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #d1d1d1;
+  border-radius: 13px;
+  padding: 13px 20px 17px 20px;
+  min-width: 220px;
+  margin-right: 10px;
+  -webkit-transition: color 0.3s, background-color 0.3s, border-color 0.3s, ease 0.3s;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s, ease 0.3s;
+}
+.error-404__links a:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.error-404__links a:hover {
+  color: #fff;
+  background-color: #a49777;
+  border-color: transparent;
 }
 .card-project {
   padding-bottom: 60px;
@@ -3570,6 +3657,20 @@ p {
   .top-line__phone {
     display: none;
   }
+  .error-404__note {
+    position: absolute;
+    top: 100px;
+    right: 190px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .error-404__img {
+    width: 523px;
+    top: 120px;
+    right: -25px;
+    position: absolute;
+  }
   .equipment-block__container-thumb .swiper-button-prev,
   .equipment-block__container-thumb .swiper-button-next {
     display: none;
@@ -3631,6 +3732,10 @@ p {
   }
   .policy-block {
     padding-bottom: 70px;
+  }
+  .error-404 {
+    padding-top: 0;
+    padding-bottom: 80px;
   }
   .card-project__body {
     padding-right: 20px;
@@ -4080,6 +4185,39 @@ p {
   .inner-page-head h1 {
     margin-bottom: 20px;
   }
+  .error-404__wrapper {
+    text-align: center;
+  }
+  .error-404__title {
+    margin-bottom: 0;
+  }
+  .error-404__note {
+    margin-bottom: 25px;
+  }
+  .error-404__note:after {
+    display: none;
+  }
+  .error-404__note br {
+    display: none;
+  }
+  .error-404__img {
+    margin-top: -75px;
+    margin-bottom: -75px;
+  }
+  .error-404__links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 30px;
+  }
+  .error-404__links a {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
   .card-project__body {
     padding-top: 130px;
     padding-bottom: 50px;
@@ -4507,6 +4645,13 @@ p {
   .button-default--large._is-loading {
     padding-top: 16px;
     padding-bottom: 15px;
+  }
+  .error-404__title {
+    font-size: 157px;
+  }
+  .error-404__img {
+    margin-top: -50px;
+    margin-bottom: -30px;
   }
   .catalog-block__item {
     width: 100%;

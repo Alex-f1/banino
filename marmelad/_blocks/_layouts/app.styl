@@ -12,6 +12,9 @@ body
   // background: linear-gradient(360deg, #FFFFFF 37.34%, rgba(255, 255, 255, 0) 66.97%), #F5F5F5
   background-repeat: no-repeat
 
+  &.page-404
+    background-color: #fff
+
 h1, h2, h3, h4, h5, h6
   margin-top: 0
   margin-bottom: 20px
@@ -296,3 +299,132 @@ p
 
       &:hover
         text-decoration: underline
+
+.error-404
+  padding-top: 60px
+  padding-bottom: 150px
+  overflow: hidden
+
+  @media (max-width: 1279px)
+    padding-top: 0
+    padding-bottom: 80px
+
+  &__wrapper
+    position: relative
+    max-width: 785px
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+
+    @media (max-width: 767px)
+      text-align: center
+
+  &__title
+    font-size: 265px
+    color: #A49777
+    font-weight: 400
+    line-height: 1
+    text-shadow: 18px 16px 16px rgba(0, 0, 0, 0.17)
+    margin-bottom: 60px
+
+    @media (max-width: 767px)
+      margin-bottom: 0
+
+    @media (max-width: 639px)
+      font-size: 157px
+
+  &__desc
+    font-weight: 700
+    color: #A49777
+    font-size: 28px
+    line-height: 1.1
+
+  &__note
+    font-size: 22px
+    color: #ABABAB
+    font-weight: 500
+    line-height: 1.1
+
+    @media (min-width: 768px)
+      position: absolute
+      top: 100px
+      right: 190px
+      display: flex
+
+    @media (max-width: 767px)
+      margin-bottom: 25px
+
+    &:after
+      content: ''
+      width: 32px
+      height: 32px
+      background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='16' fill='%23F24A4A'/%3E%3Crect x='11.7578' y='13.1714' width='2' height='10' transform='rotate(-45 11.7578 13.1714)' fill='white'/%3E%3Crect x='13.1719' y='20.2427' width='2' height='10' transform='rotate(-135 13.1719 20.2427)' fill='white'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      transform: translate(-5px, -10px)
+
+      @media (max-width: 767px)
+        display: none
+
+    br
+      @media (max-width: 767px)
+        display: none
+
+  &__img
+    width: 100%
+
+    @media (min-width: 768px)
+      width: 523px
+      top: 120px
+      right: -25px
+      position: absolute
+
+    @media (max-width: 767px)
+      margin-top: -75px
+      margin-bottom: -75px
+
+    @media (max-width: 639px)
+      margin-top: -50px
+      margin-bottom: -30px
+
+    img
+      vertical-align: top
+
+  &__links
+    margin-top: 90px
+    display: flex
+    align-items: center
+    position: relative
+    z-index: 5
+
+    @media (max-width: 767px)
+      flex-direction: column
+      align-items: center
+      margin-top: 30px
+
+    a
+      font-size: 18px
+      color: #535353
+      font-weight: 600
+      line-height: 1
+      text-align: center
+      text-decoration: none
+      border: 1px solid #D1D1D1
+      border-radius: 13px
+      padding: 13px 20px 17px 20px
+      min-width: 220px
+      margin-right: 10px
+      transition: color 0.3s, background-color 0.3s, border-color 0.3s, ease 0.3s
+
+      @media (max-width: 767px)
+        margin-bottom: 15px
+        margin-right: 0
+
+      &:last-child
+        margin-right: 0
+        margin-bottom: 0
+
+      &:hover
+        color: #fff
+        background-color: #A49777
+        border-color: transparent
